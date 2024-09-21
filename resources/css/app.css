@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination a, .pagination span {
+    color: #e0e0e0;
+    padding: 0.5rem 1rem;
+    border: 1px solid #333;
+    margin: 0 0.25rem;
+    text-decoration: none;
+    border-radius: 0.25rem;
+}
+
+.pagination .active {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+}
+
+.pagination .disabled {
+    color: #777;
+}
+
+.centered-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.form-container {
+    max-width: 600px;
+    width: 100%;
+}
+
+/* General sidebar styling */
+#layout-menu {
+    /* Ensure the sidebar is always visible on larger screens */
+    width: 250px;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+/* Hide sidebar on smaller screens and use a collapsible approach */
+@media (max-width: 1024px) {
+    #layout-menu {
+        display: none; /* Hide sidebar on small screens */
+    }
+
+    .sidebar-toggle {
+        display: block; /* Show a toggle button for the sidebar */
+    }
+}
+
+/* Style the toggle button */
+.sidebar-toggle {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+
